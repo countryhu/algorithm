@@ -2,6 +2,10 @@
 //
 // Author: Nathan
 
+#include <iostream>
+
+#include "range/src/range.h"
+
 void TestRange() {
   std::cout << "range(15):";
   for (int i : range(15)) {
@@ -55,7 +59,6 @@ void TestRange() {
     std::cout << " " << i;
   }
   std::cout << std::endl;
-  return 0;
 }
 
 int main() {
