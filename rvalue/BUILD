@@ -15,3 +15,12 @@ cc_binary(
   deps = [
   ]
 )
+
+cc_binary(
+  name = 'func_wrapper',
+  srcs = [
+    'func_wrapper.cc',
+  ],
+  deps = [
+  ]
+)
