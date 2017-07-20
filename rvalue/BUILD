@@ -6,3 +6,12 @@ cc_binary(
   deps = [
   ]
 )
+
+cc_binary(
+  name = 'forward',
+  srcs = [
+    'forward.cc',
+  ],
+  deps = [
+  ]
+)
