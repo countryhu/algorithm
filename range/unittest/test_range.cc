@@ -4,7 +4,7 @@
 
 #include <iostream>
 
-#include "range/src/range.h"
+#include "range/range.h"
 
 void TestRange() {
   std::cout << "range(15):";
