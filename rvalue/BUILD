@@ -24,3 +24,12 @@ cc_binary(
   deps = [
   ]
 )
+
+cc_binary(
+  name = 'emplace',
+  srcs = [
+    'emplace.cc',
+  ],
+  deps = [
+  ]
+)
