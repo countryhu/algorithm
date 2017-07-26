@@ -50,6 +50,14 @@ template<typename T>
 struct is_array : public is_array_helper<typename std::remove_const<T>::type> {
 };
 
+template<typename>
+struct is_const : public false_type {
+};
+
+template<typename T>
+struct is_const<const T> : public true_type {
+};
+
 int main() {
   std::cout << "is_integral:" << std::endl;
   std::cout << "is_integral<bool>::value=" << is_integral<bool>::value << std::endl;
@@ -68,5 +76,11 @@ int main() {
   std::cout << "string[3]: " << is_array<std::string[3]>::value << std::endl;
   std::cout << "string[3][4]: " << is_array<std::string[3][4]>::value << std::endl;
   std::cout << "const string[3][4]: " << is_array<const std::string[3][4]>::value << std::endl;
+
+  std::cout << "\nis_const:" << std::endl;
+  std::cout << "int: " << is_const<int>::value << std::endl;
+  std::cout << "const int: " << is_const<const int>::value << std::endl;
+  std::cout << "char* const: " << is_const<char* const>::value << std::endl;
+  std::cout << "const char*: " << is_const<const char*>::value << std::endl;
   return 0;
 }
