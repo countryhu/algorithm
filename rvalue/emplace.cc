@@ -43,6 +43,9 @@ int main() {
   std::cout << "\n pre vector.push_back:" << std::endl;
   v.push_back(Complicated(1, 2, 3));
 
+  std::cout << "\n pre vector.emplace_back value:" << std::endl;
+  v.emplace_back(Complicated(1, 2, 3));
+
   std::cout << "\n pre vector.emplace_back:" << std::endl;
   v.emplace_back(1, 2, 3);
 
