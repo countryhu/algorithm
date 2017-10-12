@@ -11,3 +11,10 @@ cc_binary(
     '2_reverse.cc',
   ],
 )
+
+cc_binary(
+  name = '3_same',
+  srcs = [
+    '3_same.cc',
+  ],
+)
