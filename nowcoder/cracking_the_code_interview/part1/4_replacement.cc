@@ -65,7 +65,7 @@ class Replacement {
 int main() {
   Replacement obj;
   // 测试样例1
-  if (obj.replaceSpace("Mr John Smith", 13) == "Mr%20John%20Smith") {
+  if (obj.replaceSpace("Mr John Smith", 13) == "Mr%20John%20Smith") { // TODO(xf) 此处进不到if里面，如何判断带%的字符串相等
     cout << "case1: " << "\"Mr John Smith\" check ok" << endl;
   }
 

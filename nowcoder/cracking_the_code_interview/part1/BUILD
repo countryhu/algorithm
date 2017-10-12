@@ -25,3 +25,10 @@ cc_binary(
     '4_replacement.cc',
   ],
 )
+
+cc_binary(
+  name = '5_zipper',
+  srcs = [
+    '5_zipper.cc',
+  ],
+)
