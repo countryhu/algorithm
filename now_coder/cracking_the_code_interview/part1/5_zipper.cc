@@ -27,8 +27,6 @@ using namespace std;
   错题本：
   1. 没有考虑a12b13c1这类数字是多位的情况。
 
-
-
   方案一:从头遍历iniString，压缩字符追加到新的string最后根据size与原始length比较决定返回哪个。
   优点：一次便利iniString. 逻辑相对简单，不容易出错
   缺点: 不知道最终压缩长度，追加次数过多效率较低，需要优化.可以考虑预申请2*length的空间,用resize
@@ -69,7 +67,7 @@ class Zipper {
     }
 
     // abcccccaaa
-    // 下面iniString.size() > 2
+    // 下面iniString.size() > 1
     int baseIndex = 0;
 
     // 首字母入栈
@@ -124,13 +122,14 @@ void TestCase(string input, string expectOutput) {
         << "\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" << endl;
   }
 }
-// int main() {
-  // TestCase("aabcccccaaa", "a2b1c5a3");
-  // TestCase("welcometonowcoderrrrr", "welcometonowcoderrrrr");
-  // TestCase("", "");
-  // TestCase("a", "a");
-  // TestCase("aa", "aa");
-  // TestCase("aaa", "a3");
-  // TestCase("jjjjjjxxxxxxxooZLLLLLLLLQQQQQQQQQLLLLLLLLECXXXXXXXIIIIIIIIIhjjyyySSooooooooommmuuEEEEEEEEEnnnnnnnffffffAAAAAllllllllbbbbkkkkkkkkkkkkKKKKKKhhhhhhhhhooooooooooYCCCCCCOOOOOOOOOMMMMMMMMMMiiiiiivvvvvvvWWWWkkkkkkwwwwwwwMmmmmmmmmLLLwwwwwwwkkkjjjjjjttttQQQQQQQQQaaaaaaaFFFFFFFlllllllllggggggggggPPPPPPuuuuuuuuaYYYYYYwQQQFFFFFFFFFFaaaaapXXXXXXXxxxxxxQQQQQQQQQsssssGGGGfffffffddddddpppQQQQQQHHHTTTaaaaaaGGGGGGddyyyyyMhhllllllllllNNNNNNNNUUUWWWWWWLLLLLLLLLYYYYYYYYYYTTKKKKKKKKiiiiiiitttttttXXXXXXXXXLLLHZZZZZZZssssjjJJJEEEEEOOOOOttttttttttBBttttttTTTTTTTTTTrrrrttttRRRRRyyooooooaaaaaaaaarrrrrrrPPPPPPPjjPPPPddddddddddHHHHnnnnnnnnnnSSSSSSSSSSzzHHHHHHHHHddddddDDDzzzhhhhhfffffffffftttttteeeeeeeeEEEEEEEEEaaaaaaccccccccccFFFFFFFF", "j6x7o2Z1L8Q9L8E1C1X7I9h1j2y3S2o9m3u2E9n7f6A5l8b4k12K6h9o10Y1C6O9M10i6v7W4k6w7M1m8L3w7k3j6t4Q9a7F7l9g10P6u8a1Y6w1Q3F10a5p1X7x6Q9s5G4f7d6p3Q6H3T3a6G6d2y5M1h2l10N8U3W6L9Y10T2K8i7t7X9L3H1Z7s4j2J3E5O5t10B2t6T10r4t4R5y2o6a9r7P7j2P4d10H4n10S10z2H9d6D3z3h5f10t6e8E9a6c10F8");
-  // return 0;
-// }
+
+int main() {
+  TestCase("aabcccccaaa", "a2b1c5a3");
+  TestCase("welcometonowcoderrrrr", "welcometonowcoderrrrr");
+  TestCase("", "");
+  TestCase("a", "a");
+  TestCase("aa", "aa");
+  TestCase("aaa", "a3");
+  TestCase("jjjjjjxxxxxxxooZLLLLLLLLQQQQQQQQQLLLLLLLLECXXXXXXXIIIIIIIIIhjjyyySSooooooooommmuuEEEEEEEEEnnnnnnnffffffAAAAAllllllllbbbbkkkkkkkkkkkkKKKKKKhhhhhhhhhooooooooooYCCCCCCOOOOOOOOOMMMMMMMMMMiiiiiivvvvvvvWWWWkkkkkkwwwwwwwMmmmmmmmmLLLwwwwwwwkkkjjjjjjttttQQQQQQQQQaaaaaaaFFFFFFFlllllllllggggggggggPPPPPPuuuuuuuuaYYYYYYwQQQFFFFFFFFFFaaaaapXXXXXXXxxxxxxQQQQQQQQQsssssGGGGfffffffddddddpppQQQQQQHHHTTTaaaaaaGGGGGGddyyyyyMhhllllllllllNNNNNNNNUUUWWWWWWLLLLLLLLLYYYYYYYYYYTTKKKKKKKKiiiiiiitttttttXXXXXXXXXLLLHZZZZZZZssssjjJJJEEEEEOOOOOttttttttttBBttttttTTTTTTTTTTrrrrttttRRRRRyyooooooaaaaaaaaarrrrrrrPPPPPPPjjPPPPddddddddddHHHHnnnnnnnnnnSSSSSSSSSSzzHHHHHHHHHddddddDDDzzzhhhhhfffffffffftttttteeeeeeeeEEEEEEEEEaaaaaaccccccccccFFFFFFFF", "j6x7o2Z1L8Q9L8E1C1X7I9h1j2y3S2o9m3u2E9n7f6A5l8b4k12K6h9o10Y1C6O9M10i6v7W4k6w7M1m8L3w7k3j6t4Q9a7F7l9g10P6u8a1Y6w1Q3F10a5p1X7x6Q9s5G4f7d6p3Q6H3T3a6G6d2y5M1h2l10N8U3W6L9Y10T2K8i7t7X9L3H1Z7s4j2J3E5O5t10B2t6T10r4t4R5y2o6a9r7P7j2P4d10H4n10S10z2H9d6D3z3h5f10t6e8E9a6c10F8");
+  return 0;
+}

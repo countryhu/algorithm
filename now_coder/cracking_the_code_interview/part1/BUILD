@@ -1,34 +1,30 @@
 cc_binary(
   name = '1_different',
-  srcs = [
-    '1_different.cc',
-  ],
+  srcs = '1_different.cc',
 )
 
 cc_binary(
   name = '2_reverse',
-  srcs = [
-    '2_reverse.cc',
-  ],
+  srcs = '2_reverse.cc',
 )
 
 cc_binary(
   name = '3_same',
-  srcs = [
-    '3_same.cc',
-  ],
+  srcs = '3_same.cc',
 )
 
 cc_binary(
   name = '4_replacement',
-  srcs = [
-    '4_replacement.cc',
-  ],
+  srcs = '4_replacement.cc',
 )
 
 cc_binary(
   name = '5_zipper',
-  srcs = [
-    '5_zipper.cc',
-  ],
+  srcs = '5_zipper.cc',
 )
+
+cc_binary(
+  name = '6_transformImage',
+  srcs = '6_transformImage.cc',
+)
+

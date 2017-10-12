@@ -2,3 +2,5 @@ build64_debug/
 .Building.lock
 .sconsign.dblite
 blade-bin
+tags
+.SConstruct.lock
