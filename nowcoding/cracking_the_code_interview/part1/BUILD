@@ -18,3 +18,10 @@ cc_binary(
     '3_same.cc',
   ],
 )
+
+cc_binary(
+  name = '4_replacement',
+  srcs = [
+    '4_replacement.cc',
+  ],
+)
