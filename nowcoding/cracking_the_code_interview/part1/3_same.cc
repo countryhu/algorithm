@@ -21,7 +21,7 @@ using namespace std;
 优点：O(n)的时间复杂度
 缺点：O(n)的空间复杂度
 方案二：排序
-优点：不需要额外的空间（快排，归并等）
+优点：不需要额外的空间（快排，归并等）,清晰，有成熟库，不易出错
 缺点：时间复杂度O(nlogn)
 方案三：每个字符两个字符串循环遍历统计次数
 优点：实现简单，空间复杂度较低O(k)
@@ -31,26 +31,23 @@ using namespace std;
 class Same {
  public:
   bool checkSam(string stringA, string stringB) {
-    if (stringA.size() != stringB.size())
-      return false;
-
+    if (stringA.size() != stringB.size()) return false;
     std::map<char, int> charNums;
     for (size_t i = 0; i < stringA.size(); ++i) {
       charNums[stringA[i]] ++;
     }
 
     for (size_t i = 0; i < stringB.size(); ++i) {
-      if (--charNums[stringB[i]] < 0) {
+      if (charNums[stringB[i]] == 0)
         return false;
-      }
+
+      if (charNums[stringB[i]] == 1)
+        charNums.erase(stringB[i]);
+
+      charNums[stringB[i]] --;
     }
 
-    for (auto iter : charNums) {
-      if (iter.second != 0)
-        return false;
-    }
-
-    return true;
+    return charNums.empty();
   }
 };
 
@@ -60,6 +57,7 @@ int main() {
   if (obj.checkSam("This is nowcoder", "is This nowcoder")) {
     cout << "\"This is nowcoder\", \"is This nowcoder\" check ok" << endl;
   }
+
   // 大小写
   if (!obj.checkSam("Here you are", "Are you here")) {
     cout << "\"Here you are\" check ok" << endl;
