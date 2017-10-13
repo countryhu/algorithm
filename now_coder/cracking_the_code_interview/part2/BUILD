@@ -1,4 +1,9 @@
 cc_binary(
-  name = '1_different',
-  srcs = '1_different.cc',
+  name = '4_partition',
+  srcs = '4_partition.cc',
+)
+
+cc_binary(
+  name = '5_plusAB',
+  srcs = '5_plusAB.cc',
 )
