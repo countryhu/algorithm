@@ -28,3 +28,8 @@ cc_binary(
   srcs = '6_transformImage.cc',
 )
 
+cc_binary(
+  name = '7_clearZero',
+  srcs = '7_clearZero.cc',
+)
+
