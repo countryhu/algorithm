@@ -55,21 +55,21 @@ void TestCase(string input, string input2, bool expectOutput) {
   }
 }
 
-// int main() {
-  // // 测试用例
-  // TestCase("Hello world","worldhello ", false);
+int main() {
+  // 测试用例
+  TestCase("Hello world","worldhello ", false);
 
-  // // 测试用例
-  // TestCase("waterbottle", "erbottlewat",true);
+  // 测试用例
+  TestCase("waterbottle", "erbottlewat",true);
 
-  // TestCase("1", "1",true);
+  TestCase("1", "1",true);
 
-  // TestCase("", "",true);
+  TestCase("", "",true);
 
-  // TestCase("12", "21",true);
+  TestCase("12", "21",true);
 
-  // TestCase("1 ", "1", false);
+  TestCase("1 ", "1", false);
 
-  // TestCase(" ", "  ", false);
-  // return 0;
-// }
+  TestCase(" ", "  ", false);
+  return 0;
+}
