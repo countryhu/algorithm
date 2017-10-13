@@ -1,10 +1,10 @@
-// #include <iostream>
-// #include <string.h>
-// #include <stdio.h>
-// #include <vector>
-// #include "util/to_string.h"
+#include <iostream>
+#include <string.h>
+#include <stdio.h>
+#include <vector>
+#include "util/to_string.h"
 
-// using namespace std;
+using namespace std;
 /**
   题目描述
   请编写一个算法，若N阶方阵中某个元素为0，则将其所在的行与列清零。
@@ -63,37 +63,37 @@ class Clearer {
   }
 };
 
-// static int caseN = 0;
-// void TestCase(vector<vector<int> > input, int n, const vector<vector<int> >& expectOutput) {
-  // cout << "case enter. with input:" << util::ToString(input);
+static int caseN = 0;
+void TestCase(vector<vector<int> > input, int n, const vector<vector<int> >& expectOutput) {
+  cout << "case enter. with input:" << util::ToString(input);
 
-  // Clearer obj;
-  // auto output = obj.clearZero(input, n);
-  // if (output == expectOutput) {
-    // cout << "case" << ++caseN << ": check ok. with input:" << util::ToString(input)
-        // << "\n output as expect:" << util::ToString(output) << endl;
-  // } else {
-    // cout << "\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
-        // << "case" << ++caseN << ": check failed. with input:" << util::ToString(input)
-        // << "\n-------------------------------\n"
-        // << "   expectOutput:" << util::ToString(expectOutput)
-        // << "\n-------------------------------\n"
-        // << "but actuaOutput:" << util::ToString(output)
-        // << "\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" << endl;
-  // }
-// }
+  Clearer obj;
+  auto output = obj.clearZero(input, n);
+  if (output == expectOutput) {
+    cout << "case" << ++caseN << ": check ok. with input:" << util::ToString(input)
+        << "\n output as expect:" << util::ToString(output) << endl;
+  } else {
+    cout << "\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+        << "case" << ++caseN << ": check failed. with input:" << util::ToString(input)
+        << "\n-------------------------------\n"
+        << "   expectOutput:" << util::ToString(expectOutput)
+        << "\n-------------------------------\n"
+        << "but actuaOutput:" << util::ToString(output)
+        << "\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" << endl;
+  }
+}
 
-// int main() {
-  // // 测试用例
-  // TestCase({{1,2,3},{0,1,2},{0,0,1}}, 3, {{0,0,3},{0,0,0},{0,0,0}});
+int main() {
+  // 测试用例
+  TestCase({{1,2,3},{0,1,2},{0,0,1}}, 3, {{0,0,3},{0,0,0},{0,0,0}});
 
-  // // 特殊：偶数个
-  // TestCase({{1,2}, {3,4}}, 2, {{1,2}, {3,4}});
+  // 特殊：偶数个
+  TestCase({{1,2}, {3,4}}, 2, {{1,2}, {3,4}});
 
-  // // 特殊：一个
-  // TestCase({{0}}, 1, {{0}});
+  // 特殊：一个
+  TestCase({{0}}, 1, {{0}});
 
-  // // 特殊：null
-  // TestCase({{}}, 0, {{}});
-  // return 0;
-// }
+  // 特殊：null
+  TestCase({{}}, 0, {{}});
+  return 0;
+}

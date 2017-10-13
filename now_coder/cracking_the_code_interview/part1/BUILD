@@ -33,3 +33,7 @@ cc_binary(
   srcs = '7_clearZero.cc',
 )
 
+cc_binary(
+  name = '8_checkReverseEqual',
+  srcs = '8_checkReverseEqual.cc',
+)
