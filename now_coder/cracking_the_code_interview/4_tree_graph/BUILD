@@ -17,3 +17,8 @@ cc_binary(
   name = '6_findSucc',
   srcs = '6_findSucc.cc',
 )
+
+cc_binary(
+  name = '7_getLCA',
+  srcs = '7_getLCA.cc',
+)
