@@ -1,4 +1,4 @@
 cc_binary(
-  name = '4_partition',
-  srcs = '4_partition.cc',
+  name = '3_buildMinimalBST',
+  srcs = '3_buildMinimalBST.cc',
 )
