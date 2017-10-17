@@ -12,3 +12,8 @@ cc_binary(
   name = '5_checkBST',
   srcs = '5_checkBST.cc',
 )
+
+cc_binary(
+  name = '6_findSucc',
+  srcs = '6_findSucc.cc',
+)
