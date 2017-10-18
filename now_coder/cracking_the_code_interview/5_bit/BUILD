@@ -7,3 +7,13 @@ cc_binary(
   name = '2_printBin',
   srcs = '2_printBin.cc',
 )
+
+cc_binary(
+  name = '3_getCloseNumber',
+  srcs = '3_getCloseNumber.cc',
+)
+
+cc_binary(
+  name = '4_calcCost',
+  srcs = '4_calcCost.cc',
+)
