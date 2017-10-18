@@ -32,12 +32,12 @@ class Exchange {
   }
 };
 
-// int main() {
-  // cout << sizeof(int) << endl;
-  // Exchange obj;
-  // int ret = obj.exchangeOddEven(711908);
-  // cout << bitset<32>(711908) << endl;
-  // cout << bitset<32>(ret) << endl;
-  // cout << bitset<32>(388312) << endl;
-  // return 0;
-// }
+int main() {
+  cout << sizeof(int) << endl;
+  Exchange obj;
+  int ret = obj.exchangeOddEven(711908);
+  cout << bitset<32>(711908) << endl;
+  cout << bitset<32>(ret) << endl;
+  cout << bitset<32>(388312) << endl;
+  return 0;
+}
