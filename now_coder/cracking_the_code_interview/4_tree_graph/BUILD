@@ -22,3 +22,8 @@ cc_binary(
   name = '7_getLCA',
   srcs = '7_getLCA.cc',
 )
+
+cc_binary(
+  name = '8_FindPath',
+  srcs = '8_FindPath.cc',
+)
