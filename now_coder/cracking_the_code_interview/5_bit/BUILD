@@ -17,3 +17,8 @@ cc_binary(
   name = '4_calcCost',
   srcs = '4_calcCost.cc',
 )
+
+cc_binary(
+  name = '5_exchangeOddEven',
+  srcs = '5_exchangeOddEven.cc',
+)
