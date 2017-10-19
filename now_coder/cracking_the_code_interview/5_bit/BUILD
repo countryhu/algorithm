@@ -14,11 +14,11 @@ cc_binary(
 )
 
 cc_binary(
-  name = '4_calcCost',
-  srcs = '4_calcCost.cc',
+  name = '5_calcCost',
+  srcs = '5_calcCost.cc',
 )
 
 cc_binary(
-  name = '5_exchangeOddEven',
-  srcs = '5_exchangeOddEven.cc',
+  name = '6_exchangeOddEven',
+  srcs = '6_exchangeOddEven.cc',
 )
