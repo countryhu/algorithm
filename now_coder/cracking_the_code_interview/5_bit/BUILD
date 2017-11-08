@@ -22,3 +22,8 @@ cc_binary(
   name = '6_exchangeOddEven',
   srcs = '6_exchangeOddEven.cc',
 )
+
+cc_binary(
+  name = '8_renderPixel',
+  srcs = '8_renderPixel.cc',
+)
