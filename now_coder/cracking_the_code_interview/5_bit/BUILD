@@ -24,6 +24,11 @@ cc_binary(
 )
 
 cc_binary(
+  name = '7_findMissing',
+  srcs = '7_findMissing.cc',
+)
+
+cc_binary(
   name = '8_renderPixel',
   srcs = '8_renderPixel.cc',
 )
