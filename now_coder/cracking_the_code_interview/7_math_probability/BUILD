@@ -12,3 +12,8 @@ cc_binary(
   name = '3_calc',
   srcs = '3_calc.cc',
 )
+
+cc_binary(
+  name = '4_getBipartition',
+  srcs = '4_getBipartition.cc',
+)
