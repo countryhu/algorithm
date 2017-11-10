@@ -1,19 +1,19 @@
 cc_binary(
-  name = '1_antsCollision',
-  srcs = '1_antsCollision.cc',
+  name = '2_antsCollision',
+  srcs = '2_antsCollision.cc',
 )
 
 cc_binary(
-  name = '2_checkCrossLine',
-  srcs = '2_checkCrossLine.cc',
+  name = '3_checkCrossLine',
+  srcs = '3_checkCrossLine.cc',
 )
 
 cc_binary(
-  name = '3_calc',
-  srcs = '3_calc.cc',
+  name = '4_calc',
+  srcs = '4_calc.cc',
 )
 
 cc_binary(
-  name = '4_getBipartition',
-  srcs = '4_getBipartition.cc',
+  name = '5_getBipartition',
+  srcs = '5_getBipartition.cc',
 )
