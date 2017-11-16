@@ -22,3 +22,8 @@ cc_binary(
   name = '6_getLine',
   srcs = '6_getLine.cc',
 )
+
+cc_binary(
+  name = '7_findKth',
+  srcs = '7_findKth.cc',
+)
