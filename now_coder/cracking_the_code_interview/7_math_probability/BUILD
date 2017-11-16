@@ -17,3 +17,8 @@ cc_binary(
   name = '5_getBipartition',
   srcs = '5_getBipartition.cc',
 )
+
+cc_binary(
+  name = '6_getLine',
+  srcs = '6_getLine.cc',
+)
