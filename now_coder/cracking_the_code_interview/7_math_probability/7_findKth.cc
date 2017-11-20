@@ -14,7 +14,7 @@ using namespace std;
 
   -------
   题目分析
-  1. 分多队列357放。防止3*5<7的题目
+  1. 分多队列放素因子abc。防止a*b<c的题目
  **/
 
 class KthNumber {
