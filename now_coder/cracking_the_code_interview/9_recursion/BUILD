@@ -12,3 +12,13 @@ cc_binary(
   name = '3_countWaysRobot2',
   srcs = '3_countWaysRobot2.cc',
 )
+
+cc_binary(
+  name = '4_findMagicIndex',
+  srcs = '4_findMagicIndex.cc',
+)
+
+cc_binary(
+  name = '5_findMagicIndex2',
+  srcs = '5_findMagicIndex2.cc',
+)
