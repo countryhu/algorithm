@@ -32,3 +32,8 @@ cc_binary(
   name = '5_getPermutation',
   srcs = '5_getPermutation.cc',
 )
+
+cc_binary(
+  name = '6_chkParenthesis',
+  srcs = '6_chkParenthesis.cc',
+)
