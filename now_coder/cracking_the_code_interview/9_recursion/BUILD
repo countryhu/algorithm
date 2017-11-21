@@ -22,3 +22,8 @@ cc_binary(
   name = '5_findMagicIndex2',
   srcs = '5_findMagicIndex2.cc',
 )
+
+cc_binary(
+  name = '6_getSubsets',
+  srcs = '6_getSubsets.cc',
+)
