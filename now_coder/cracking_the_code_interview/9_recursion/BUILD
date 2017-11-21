@@ -9,21 +9,26 @@ cc_binary(
 )
 
 cc_binary(
-  name = '3_countWaysRobot2',
-  srcs = '3_countWaysRobot2.cc',
+  name = '2_countWaysRobot2',
+  srcs = '2_countWaysRobot2.cc',
 )
 
 cc_binary(
-  name = '4_findMagicIndex',
-  srcs = '4_findMagicIndex.cc',
+  name = '3_findMagicIndex',
+  srcs = '3_findMagicIndex.cc',
 )
 
 cc_binary(
-  name = '5_findMagicIndex2',
-  srcs = '5_findMagicIndex2.cc',
+  name = '3_findMagicIndex2',
+  srcs = '3_findMagicIndex2.cc',
 )
 
 cc_binary(
-  name = '6_getSubsets',
-  srcs = '6_getSubsets.cc',
+  name = '4_getSubsets',
+  srcs = '4_getSubsets.cc',
+)
+
+cc_binary(
+  name = '5_getPermutation',
+  srcs = '5_getPermutation.cc',
 )
