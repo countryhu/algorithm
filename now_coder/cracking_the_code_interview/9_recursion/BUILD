@@ -37,3 +37,13 @@ cc_binary(
   name = '6_chkParenthesis',
   srcs = '6_chkParenthesis.cc',
 )
+
+cc_binary(
+  name = '7_floodFill',
+  srcs = '7_floodFill.cc',
+)
+
+cc_binary(
+  name = '8_countWays',
+  srcs = '8_countWays.cc',
+)
