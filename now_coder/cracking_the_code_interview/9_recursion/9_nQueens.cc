@@ -19,6 +19,7 @@ using namespace std;
 
   -------
   题目分析
+  1. 递归解决15*15超时
  **/
 
 class Queens {
