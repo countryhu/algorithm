@@ -32,35 +32,35 @@ class Coins {
   }
 };
 
-// int main() {
-  // // 样例
-  // {
-    // Coins obj;
-    // std::cout << "obj.countWays(6)=2:" << obj.countWays(6) << std::endl;
-  // }
+int main() {
+  // 样例
+  {
+    Coins obj;
+    std::cout << "obj.countWays(6)=2:" << obj.countWays(6) << std::endl;
+  }
 
-  // {
-    // Coins obj;
-    // std::cout << "obj.countWays(1)=1:" << obj.countWays(1) << std::endl;
-  // }
+  {
+    Coins obj;
+    std::cout << "obj.countWays(1)=1:" << obj.countWays(1) << std::endl;
+  }
 
-  // {
-    // Coins obj;
-    // std::cout << "obj.countWays(100):" << obj.countWays(100) << std::endl;
-  // }
-  // {
-    // Coins obj;
-    // std::cout << "obj.countWays(1000):" << obj.countWays(1000) << std::endl;
-  // }
+  {
+    Coins obj;
+    std::cout << "obj.countWays(100):" << obj.countWays(100) << std::endl;
+  }
+  {
+    Coins obj;
+    std::cout << "obj.countWays(1000):" << obj.countWays(1000) << std::endl;
+  }
 
-  // {
-    // Coins obj;
-    // std::cout << "obj.countWays(10000):" << obj.countWays(10000) << std::endl;
-  // }
+  {
+    Coins obj;
+    std::cout << "obj.countWays(10000):" << obj.countWays(10000) << std::endl;
+  }
 
-  // {
-    // Coins obj;
-    // std::cout << "obj.countWays(100000):" << obj.countWays(100000) << std::endl;
-  // }
-  // return 0;
-// }
+  {
+    Coins obj;
+    std::cout << "obj.countWays(100000):" << obj.countWays(100000) << std::endl;
+  }
+  return 0;
+}

@@ -47,3 +47,13 @@ cc_binary(
   name = '8_countWays',
   srcs = '8_countWays.cc',
 )
+
+cc_binary(
+  name = '9_nQueens',
+  srcs = '9_nQueens.cc',
+)
+
+cc_binary(
+  name = '10_getHeight',
+  srcs = '10_getHeight.cc',
+)
