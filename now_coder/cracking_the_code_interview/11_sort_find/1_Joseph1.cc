@@ -1,5 +1,5 @@
 #include <iostream>
-#include <vector>
+#include <list>
 
 /**
   题目描述
@@ -14,12 +14,37 @@
 
   -------
   题目分析
+  1. 考虑递归求解
  **/
 
 class Joseph {
  public:
   int getResult(int n, int m) {
-    // write code here
+    std::list<int> existNumsList;
+    for (int i = 1; i <= n; ++i) {
+      existNumsList.push_back(i);
+    }
+
+    int lastEraseNum = 0;
+    auto curIndex = existNumsList.begin();
+    for (int i = 0; i < n; ++i) {
+      for (int j = 0; j < m - 1; ++j) {
+        if (curIndex != existNumsList.end()) {
+          curIndex ++;
+        }
+        if (curIndex == existNumsList.end()) {
+          curIndex = existNumsList.begin();
+        }
+      }
+      // 删元素
+      std::cout << i << ": erase:" << *curIndex << std::endl;
+      lastEraseNum = *curIndex;
+      curIndex = existNumsList.erase(curIndex);
+      if (curIndex == existNumsList.end()) {
+        curIndex = existNumsList.begin();
+      }
+    }
+    return lastEraseNum;
   }
 };
 
