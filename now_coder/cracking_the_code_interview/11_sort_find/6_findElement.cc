@@ -19,7 +19,32 @@
 class Finder {
  public:
   std::vector<int> findElement(std::vector<std::vector<int> > mat, int n, int m, int x) {
-    // write code here
+    return myFindElement(mat, 0, 0, n - 1, m - 1, x);
+  }
+
+ private:
+  std::vector<int> myFindElement(std::vector<std::vector<int> > mat, int startX, int startY, int endX, int endY, int x) {
+    std::cout << " startX:" << startX << " startY:" << startY << " endX:" << endX << " endY:" << endY << std::endl;
+    if (startX > endX || startY > endY) {
+      std::cout << "err startX:" << startX << " startY:" << startY << " endX:" << endX << " endY:" << endY << std::endl;
+      return std::vector<int>();
+    }
+
+    int midX = (startX + endX) / 2;
+    int midY = (startY + endY) / 2;
+    if (mat[midX][midY] == x) {
+      return {midX, midY};
+    }
+
+    if (mat[midX][midY] > x) { // 左上
+      return myFindElement(mat, startX, startY, midX, midY, x);
+    } else if (mat[midX][endY] >= x) { // 右上
+      return myFindElement(mat, startX, midY + 1, midX, endY, x);
+    } else if (mat[endX][midY] >= x) { // 左下
+      return myFindElement(mat, midX + 1, startY, endX, midY, x);
+    } else { // 右下
+      return myFindElement(mat, midX + 1, midY + 1, endX, endY, x);
+    }
   }
 };
 
@@ -27,7 +52,12 @@ int main() {
   // 样例
   {
     Finder obj;
-    // std::cout << "obj.getResult(5, 3)=4:" << obj.getResult(5, 3) << std::endl;
+    std::vector<std::vector<int> > mat = {{1,2,3}, {4,5,6}};
+    auto ret = obj.findElement(mat, 2, 3, 1);
+    for (auto val : ret) {
+      std::cout << val << " ";
+    }
+    std::cout << std::endl;
   }
   return 0;
 }

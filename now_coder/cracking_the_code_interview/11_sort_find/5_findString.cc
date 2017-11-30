@@ -60,20 +60,20 @@ class Finder {
   }
 };
 
-// int main() {
-  // // 样例
-  // {
-    // Finder obj;
-    // std::vector<std::string> str = {"a","b","","c","","d"};
-    // std::cout << obj.findString(str, 6, "c") << std::endl;
-    // std::cout << obj.findString(str, 6, "") << std::endl;
-  // }
+int main() {
+  // 样例
+  {
+    Finder obj;
+    std::vector<std::string> str = {"a","b","","c","","d"};
+    std::cout << obj.findString(str, 6, "c") << std::endl;
+    std::cout << obj.findString(str, 6, "") << std::endl;
+  }
 
-  // // 样例
-  // {
-    // Finder obj;
-    // std::vector<std::string> str = {"a","b","","c","","d"};
-    // std::cout << obj.findString(str, 6, "d") << std::endl;
-  // }
-  // return 0;
-// }
+  // 样例
+  {
+    Finder obj;
+    std::vector<std::string> str = {"a","b","","c","","d"};
+    std::cout << obj.findString(str, 6, "d") << std::endl;
+  }
+  return 0;
+}
