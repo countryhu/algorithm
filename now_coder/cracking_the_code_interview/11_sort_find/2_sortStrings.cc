@@ -1,5 +1,7 @@
+#include <algorithm>
 #include <iostream>
 #include <vector>
+#include <unordered_map>
 
 /**
   题目描述
@@ -20,7 +22,30 @@
 class SortString {
  public:
   std::vector<std::string> sortStrings(std::vector<std::string> str, int n) {
-    // write code here
+    std::cout << str.size() << std::endl;
+    (void)n;
+    std::unordered_map<std::string, std::string> hashMap;
+    for (auto& strElement : str) {
+      std::string hashStr = StrSort(strElement);
+      if (hashMap[hashStr].empty() || strElement < hashMap[hashStr]) {
+        hashMap[hashStr] = strElement;
+        std::cout << "hashStr:" << hashStr << " strElement:" << strElement << std::endl;
+      }
+    }
+
+    std::vector<std::string> rets;
+    for (auto iter : hashMap) {
+      rets.push_back(iter.second);
+    }
+    std::sort(rets.begin(), rets.end());
+    return rets;
+  }
+
+ private:
+  std::string StrSort(const std::string& strElement) {
+    std::string str(strElement);
+    std::sort(str.begin(), str.end());
+    return str;
   }
 };
 
@@ -28,7 +53,13 @@ int main() {
   // 样例
   {
     SortString obj;
-    // std::cout << "obj.getResult(5, 3)=4:" << obj.getResult(5, 3) << std::endl;
+    std::vector<std::string> strs = {"ab","ba","abc","cba"};
+    std::vector<std::string> rets = obj.sortStrings(strs, 4);
+    std::cout << "rets:" << std::endl;
+    for (auto& ret : rets) {
+      std::cout << ret << " ";
+    }
+    std::cout << "" << std::endl;
   }
   return 0;
 }
