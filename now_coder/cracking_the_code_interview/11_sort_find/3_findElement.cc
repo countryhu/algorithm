@@ -21,17 +21,57 @@
  **/
 
 class Finder {
-public:
-    int findElement(std::vector<int> A, int n, int x) {
-        // write code here
+ public:
+  int findElement(std::vector<int> A, int n, int x) {
+    return myFindElement(A, 0, n-1, x);
+  }
+
+ private:
+  int myFindElement(std::vector<int> A, int left, int right, int x) {
+    int mid = (left + right) / 2;
+    if (A[mid] == x) {
+      return mid;
     }
+    if (mid >= right) {
+      return -1;
+    }
+
+    if (A[mid] < A[right]) { // 右侧升序
+      if (A[mid] < x && A[right] >= x) {
+        return myFindElement(A, mid + 1, right, x);
+      } else {
+        return myFindElement(A, left, mid - 1, x);
+      }
+    } else if (A[left] < A[mid]) { // 左侧升序
+      if (A[left] <= x && A[mid] > x) {
+        return myFindElement(A, left, mid - 1, x);
+      } else {
+        return myFindElement(A, mid + 1, right, x);
+      }
+    } else {
+      int leftRet = myFindElement(A, left, mid - 1, x);
+      if (leftRet != -1) {
+        return leftRet;
+      }
+      return myFindElement(A, mid + 1, right, x);
+    }
+  }
 };
 
 int main() {
   // 样例
   {
     Finder obj;
-    // std::cout << "obj.getResult(5, 3)=4:" << obj.getResult(5, 3) << std::endl;
+    std::vector<int> A = {6,1,2,3,4,5};
+    std::cout << obj.findElement(A, 6, 6) << std::endl;
+    std::cout << obj.findElement(A, 6, 3) << std::endl;
   }
+
+  {
+    Finder obj;
+    std::vector<int> A = {10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,1,2,3,4,5,6,7,8,9};
+    std::cout << obj.findElement(A, 80,6) << std::endl;
+  }
+
   return 0;
 }
