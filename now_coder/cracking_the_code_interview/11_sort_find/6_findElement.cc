@@ -34,16 +34,16 @@ class Finder {
   }
 };
 
-// int main() {
-  // // 样例
-  // {
-    // Finder obj;
-    // std::vector<std::vector<int> > mat = {{1,2,3}, {4,5,6}};
-    // auto ret = obj.findElement(mat, 2, 3, 5);
-    // for (auto val : ret) {
-      // std::cout << val << " ";
-    // }
-    // std::cout << std::endl;
-  // }
-  // return 0;
-// }
+int main() {
+  // 样例
+  {
+    Finder obj;
+    std::vector<std::vector<int> > mat = {{1,2,3}, {4,5,6}};
+    auto ret = obj.findElement(mat, 2, 3, 5);
+    for (auto val : ret) {
+      std::cout << val << " ";
+    }
+    std::cout << std::endl;
+  }
+  return 0;
+}
