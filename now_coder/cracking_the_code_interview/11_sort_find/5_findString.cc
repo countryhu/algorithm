@@ -20,15 +20,60 @@
 class Finder {
  public:
   int findString(std::vector<std::string> str, int n, std::string x) {
-    // write code here
+    // 特殊情况:""
+    if (x.empty()) {
+      for (int i = 0; i < (int)str.size(); ++i) {
+        if (str[i].empty()) {
+          return i;
+        }
+      }
+    }
+    return myFindString(str, 0, n -1, x);
+  }
+
+ private:
+  int myFindString(const std::vector<std::string>& str, int start, int end, const std::string& x) {
+    while (str[start].empty() && start <= end) {
+      start ++;
+    }
+    while (str[end].empty() && start <= end) {
+      end --;
+    }
+    if (start > end) {
+      return -1;
+    }
+
+    int mid = (start + end) / 2;
+    while (str[mid].empty() && mid <= end) {
+      mid ++;
+    }
+
+    if (str[mid] == x) {
+      return mid;
+    }
+
+    if (str[mid] < x) {
+      return myFindString(str, mid + 1, end, x);
+    } else {
+      return myFindString(str, start, mid - 1, x);
+    }
   }
 };
 
-int main() {
-  // 样例
-  {
-    Finder obj;
-    // std::cout << "obj.getResult(5, 3)=4:" << obj.getResult(5, 3) << std::endl;
-  }
-  return 0;
-}
+// int main() {
+  // // 样例
+  // {
+    // Finder obj;
+    // std::vector<std::string> str = {"a","b","","c","","d"};
+    // std::cout << obj.findString(str, 6, "c") << std::endl;
+    // std::cout << obj.findString(str, 6, "") << std::endl;
+  // }
+
+  // // 样例
+  // {
+    // Finder obj;
+    // std::vector<std::string> str = {"a","b","","c","","d"};
+    // std::cout << obj.findString(str, 6, "d") << std::endl;
+  // }
+  // return 0;
+// }
