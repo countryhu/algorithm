@@ -20,7 +20,6 @@ using namespace std;
 class Ants {
  public:
   double antsCollision(int n) {
-    // write code here
     return 1.0 - pow(0.5, n-1);
   }
 };

@@ -1,4 +1,6 @@
 #include <iostream>
+#include <memory>
+#include <list>
 #include <vector>
 
 /**
@@ -22,7 +24,33 @@
 class Joseph {
  public:
   int getResult(int n) {
-    // write code here
+    // // 构造循环链表
+    // std::list<int> existNumsList;
+    // for (int i = 1; i <= n; ++i) {
+      // existNumsList.push_back(i);
+    // }
+
+    // auto iter = existNumsList.begin();
+
+    // std::vector<int> roundNums;
+    // roundNums.push_back(1);
+    // for (int endErase = 2; ; ++endErase) {
+      // roundNums.push_back(endErase);
+
+
+      // // 报数[2, endErase]
+      // std::shared_ptr<Node> pNode1 = pNode;
+      // while (pNode != NULL) {
+        // // 就剩一个了
+        // if (pNode->pNext_->num_ == pNode->num_) {
+          // return pNode->num_;
+        // }
+        // // 删除[2, endErase]
+        // std::cout << "endErase:" << endErase << " num:" << pNode->pNext_->num_ << std::endl;
+        // pNode->pNext_ = pNode->pNext_->pNext_;
+      // }
+      // pNode = pNode->pNext_;
+    // }
   }
 };
 

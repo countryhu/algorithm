@@ -17,12 +17,14 @@
 
   -------
   题目分析
+  1. 意味着参加游戏的人的先后顺序与原序列中的顺序应该相反
+  2. 最长递增子序列
  **/
 
 class Stack {
  public:
   int getHeight(std::vector<int> men, int n) {
-    // write code here
+    ;
   }
 };
 
